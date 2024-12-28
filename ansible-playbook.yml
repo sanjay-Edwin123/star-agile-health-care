@@ -1,5 +1,5 @@
 - name: my play to project 2
-  hosts: jos
+  hosts: all
   become: true
   tasks:
     - name: uupdate repos
