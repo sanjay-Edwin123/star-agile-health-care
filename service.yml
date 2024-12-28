@@ -6,6 +6,6 @@ spec:
   type: NodePort
   ports:
     - targetport: 8082
-    - port: 80
+      port: 80
   selector:
      luv: jos
