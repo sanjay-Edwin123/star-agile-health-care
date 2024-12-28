@@ -1,14 +1,20 @@
-- name: my play to project 2
-  hosts: all
+- name : Configure Docker on EC2 Instances
+  hosts : jos
   become: true
-  tasks:
-    - name: uupdate repos
-      command: apt update
-    - name: install docker
-      package: name=docker.io state=present
-    - name: permission to run docker
-      command: chmod 777 /var/run/docker.sock
-    - name: build docker image
-      command: docker build -t jos .
-    - name: docker container
-      command: docker run -d -P jos
+  connection : ssh
+  tasks : 
+  - name: updating apt
+    command : sudo apt-get update
+
+  - name : Install Docker
+    command : sudo apt-get install -y docker.io
+    become : yes
+    become_user : root
+
+  - name : Start Docker Service
+    command : sudo systemctl start docker
+    become : yes
+    become_user : root
+
+  - name: Deploy Docker Container
+    command: docker run -d -p 1234:8082 luvisjostonj/heal:7
