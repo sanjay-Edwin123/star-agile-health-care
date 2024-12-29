@@ -6,9 +6,5 @@
       command: apt update
     - name: install docker
       package: name=docker.io state=present
-    - name: permission to run docker
-      command: chmod 777 /var/run/docker.sock
-    - name: build docker image
-      command: docker build -t jos . chdir=/var/lib/jenkins/workspace/job1
     - name: docker container
       command: docker run -d -P jos
