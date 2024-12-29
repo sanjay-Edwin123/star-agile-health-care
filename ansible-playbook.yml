@@ -7,6 +7,6 @@
     - name: install docker
       package: name=docker.io state=present
     - name: docker image
-      command: docker pull luvisjostonj/health:12
+      command: docker pull luvisjostonj/health:13
     - name: docker con
-      command: docker run -d -p 2345:8082 luvisjostonj/health:12
+      command: docker run -d -p 8082:8082 luvisjostonj/health:13
