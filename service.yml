@@ -7,6 +7,5 @@ spec:
   ports:
     - targetPort: 8082
       port: 80
-    - NodePort: 30701
   selector:
      luv: jos
