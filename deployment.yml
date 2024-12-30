@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
         - name: c1
-          image: luvisjostonj/health:2
+          image: luvisjostonj/health:3
