@@ -9,4 +9,4 @@
     - name: docker image
       command: docker pull luvisjostonj/health:3
     - name: docker con
-      command: docker run -d -p 9002:8082 luvisjostonj/health:3
+      command: docker run -d -p 8888:8082 luvisjostonj/health:3
