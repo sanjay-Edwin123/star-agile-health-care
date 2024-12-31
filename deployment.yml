@@ -6,12 +6,12 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      luv: jos
+      san: edw
   template:
     metadata:
       name: jos
       labels:
-        luv: jos
+        san: edw
     spec:
       containers:
         - name: c1
